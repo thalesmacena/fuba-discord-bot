@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src=".github/banner.svg" width="546" alt="Fubá" />
+  <img src=".github/banner.png" width="546" alt="Fubá" />
   <br />
   <p>
     <img src="https://img.shields.io/badge/made%20by-Thales%20Macena-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=visual-studio-code&logoColor=2D325E" alt="Made by Thales Macena">
