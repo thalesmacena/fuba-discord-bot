@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src=".github/banner.png" width="546" alt="Fubá" />
+  <a href="https://discord.com/api/oauth2/authorize?client_id=819038881567080459&permissions=8&scope=bot"><img src=".github/banner.png" width="546" alt="Fubá" /></a>
   <br />
   <p>
     <img src="https://img.shields.io/badge/made%20by-Thales%20Macena-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=visual-studio-code&logoColor=2D325E" alt="Made by Thales Macena">
@@ -11,8 +11,8 @@
   </p>
 </div>
 
-## 🗂 Tabela de Conteúdo
-- [🗂 Tabela de Conteúdo](#-tabela-de-conteúdo)
+## 🗂 Table of Contents
+- [🗂 Table of Contents](#-table-of-contents)
 - [📑 About](#-about)
 - [💻 Technologies](#-technologies)
 - [🛠 Commands](#-commands)
@@ -34,7 +34,7 @@
   
   
 ## 📑 About
-Fubá is a [Discord Bot](https://discord.com/developers/applications) made in [Node.js](https://nodejs.org/en/) using the [Discord.js library](https://discord.js.org/#/). The bot has music commands, which access the youtube api and work with [Node's redable stream object] and playing with [ffmpeg]. In addition, it also has simple commands that work only with the discord api, such as clearing messages and making polls.
+Fubá is a [Discord Bot](https://discord.com/developers/applications) made in [Node.js](https://nodejs.org/en/) using the [Discord.js library](https://discord.js.org/#/). The bot has music commands, which access the youtube api and work with [Node's redable stream object](https://nodejs.org/api/stream.html#stream_readable_streams) and playing with [ffmpeg](https://www.ffmpeg.org/). In addition, it also has simple commands that work only with the discord api, such as clearing messages and making polls.
 
 ## 💻 Technologies
 
