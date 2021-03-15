@@ -15,6 +15,18 @@
 - [🗂 Tabela de Conteúdo](#-tabela-de-conteúdo)
 - [📑 About](#-about)
 - [💻 Technologies](#-technologies)
+- [🛠 Commands](#-commands)
+  - [Music Commands](#music-commands)
+    - [▶️ play](#️-play)
+    - [⏸ pause](#-pause)
+    - [⏭ skip](#-skip)
+    - [🧾 queue](#-queue)
+    - [🎚 volume](#-volume)
+    - [⏹ stop](#-stop)
+  - [Utility Commands](#utility-commands)
+    - [🗳️ pool](#️-pool)
+    - [🧹 clear](#-clear)
+    - [🤔 help](#-help)
 - [✨ Installation](#-installation)
 - [⚙️ Config](#️-config)
 - [🔥 Running](#-running)
@@ -42,6 +54,37 @@ Fubá is a [Discord Bot](https://discord.com/developers/applications) made in [N
 
 <a href="https://www.ffmpeg.org/"><img src="https://img.shields.io/badge/-FFmpeg-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=c&logoColor=2D325E" alt="FFmpeg"></a>
 
+## 🛠 Commands
+The bot has 2 types of commands, the music commands that deal with the youtube api and the bot's voice connection and the utility commands that are commands that only manage the discord's api.
+
+### Music Commands
+
+#### ▶️ play
+It accepts a request from the user and searches in the youtube api for a video more relevant to the title searched, creates a play queue in the guild and connects to the user's voice channel playing the audio of the video. If there is already a play queue in the guild, add the video to the queue.
+
+#### ⏸ pause
+Checks if there is a play queue in the guild and pauses / unpauses the bot's sound
+
+#### ⏭ skip
+Advance to the next song in the guild's play queue
+
+#### 🧾 queue
+Shows information about the guild's play queue, such as each video, its channel, its duration and the time until it is played. If the user enters a number in the play queue, he can get details about who ordered the song and when it was added to the queue.
+
+#### 🎚 volume
+Changes the audio volume of the playlist, if no parameters are passed, it only tells you the current volume of the playlist
+
+#### ⏹ stop
+
+### Utility Commands
+#### 🗳️ pool
+The user enters a question and answer options to create a pool, the bot creates a message and reacts with each one of the options so that users can vote and react.
+
+#### 🧹 clear
+Clear a number of messages from a text channel in a guild, only people with permissions to manage messages can use this command.
+
+#### 🤔 help
+Sends a direct message, informing the description of each command that the bot performs. If the name of a command is passed as an argument, give more detailed information on how to use the specific command, such as what are its arguments and examples of use.
 
 ## ✨ Installation
 Open a terminal and run the following commands:
