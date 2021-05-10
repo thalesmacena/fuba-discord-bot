@@ -19,7 +19,13 @@ const SkipCommand: ICommand = {
       return;
     }
 
-    guildQueue.connection.dispatcher.end();
+    const { dispatcher } = guildQueue.connection;
+
+    if (dispatcher.paused) {
+      dispatcher.resume();
+    }
+
+    dispatcher.end();
 
     guildQueue.textChannel.send('⏭  **Música pulada**');
   }

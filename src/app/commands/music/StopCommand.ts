@@ -19,11 +19,17 @@ const StopCommand: ICommand = {
 
     const { textChannel } = guildQueue;
 
+    const { dispatcher } = guildQueue.connection;
+
+    if (dispatcher.paused) {
+      dispatcher.resume();
+    }
+
     guildQueue.songs = [];
 
     guildQueue.totalTime = 0;
 
-    guildQueue.connection.dispatcher.end();
+    dispatcher.end();
 
     textChannel.send('⏹ **Fila interrompida**');
   }
