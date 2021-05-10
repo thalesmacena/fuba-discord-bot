@@ -1,7 +1,7 @@
-import { commands } from '../../../server';
-import { ICommand, IExecuteProps } from '../../api';
-import { Embed } from '../../views/embed';
-import { commandsList } from '../commandList';
+import { commandsList } from '@/app/commands/commandList';
+import { ICommand, IExecuteProps } from '@/app/interfaces';
+import { Embed } from '@/app/views/embed';
+import { commands } from '@/server';
 
 const OlaCommand: ICommand = {
   name: 'help',

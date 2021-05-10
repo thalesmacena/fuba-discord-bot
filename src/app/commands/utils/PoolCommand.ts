@@ -1,5 +1,5 @@
-import { ICommand, IExecuteProps } from '../../api';
-import { Embed } from '../../views/embed';
+import { ICommand, IExecuteProps } from '@/app/interfaces';
+import { Embed } from '@/app/views/embed';
 
 const alphabet = [
   '🇦',

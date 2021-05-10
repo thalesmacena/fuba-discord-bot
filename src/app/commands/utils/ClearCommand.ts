@@ -1,5 +1,5 @@
+import { ICommand, IExecuteProps } from '@/app/interfaces';
 import { Collection, Message } from 'discord.js';
-import { ICommand, IExecuteProps } from '../../api';
 
 const ClearCommand: ICommand = {
   name: 'clear',
