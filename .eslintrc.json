@@ -20,8 +20,14 @@
   },
   "plugins": [
       "@typescript-eslint",
+      "import",
       "prettier"
   ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true, "trailingComma": "none" }],
     "class-methods-use-this": "off",
