@@ -1,5 +1,5 @@
+import { ICommand, IExecuteProps } from '@/app/interfaces';
 import { StreamDispatcher } from 'discord.js';
-import { ICommand, IExecuteProps } from '../../api';
 
 const VolumeCommand: ICommand = {
   name: 'volume',

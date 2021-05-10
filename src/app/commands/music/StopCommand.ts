@@ -1,4 +1,4 @@
-import { ICommand, IExecuteProps } from '../../api';
+import { ICommand, IExecuteProps } from '@/app/interfaces';
 
 const StopCommand: ICommand = {
   name: 'stop',

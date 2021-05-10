@@ -1,6 +1,6 @@
+import { ICommand, IExecuteProps } from '@/app/interfaces';
+import { Embed } from '@/app/views/embed';
 import { addSeconds, format } from 'date-fns';
-import { ICommand, IExecuteProps } from '../../api';
-import { Embed } from '../../views/embed';
 
 const QueueCommand: ICommand = {
   name: 'queue',

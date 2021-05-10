@@ -1,6 +1,6 @@
+import { IGuildQueue, ISong } from '@/app/interfaces';
 import { Collection, StreamDispatcher } from 'discord.js';
 import ytdl from 'ytdl-core';
-import { IGuildQueue, ISong } from '../api';
 
 export const musicPlayer = async (
   song: ISong,

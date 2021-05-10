@@ -1,9 +1,9 @@
+import { ICommand, IExecuteProps, IGuildQueue, ISong } from '@/app/interfaces';
+import { musicPlayer } from '@/app/utils/musicPlayer';
+import { Embed } from '@/app/views/embed';
+import { guildsQueuesSongs } from '@/server';
 import { addSeconds, format } from 'date-fns';
 import ytsr from 'ytsr';
-import { guildsQueuesSongs } from '../../../server';
-import { ICommand, IExecuteProps, IGuildQueue, ISong } from '../../api';
-import { musicPlayer } from '../../utils/musicPlayer';
-import { Embed } from '../../views/embed';
 
 const PlayCommand: ICommand = {
   name: 'play',

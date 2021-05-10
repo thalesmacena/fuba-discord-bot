@@ -1,6 +1,6 @@
+import { ICommand, IGuildQueue } from '@/app/interfaces';
 import { Collection, Message } from 'discord.js';
 import 'dotenv/config';
-import { ICommand, IGuildQueue } from './app/api';
 
 export const routes = (
   message: Message,
