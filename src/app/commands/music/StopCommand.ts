@@ -6,7 +6,11 @@ const StopCommand: ICommand = {
   args: 'Nenhum argumento',
   example: '`stop`',
 
-  execute: async ({ message, guildQueue }: IExecuteProps): Promise<void> => {
+  execute: async ({
+    message,
+    guildQueue,
+    queue
+  }: IExecuteProps): Promise<void> => {
     if (!message.member.voice.channel) {
       message.reply('Você deve estar em um canal de voz para parar a música');
       return;
@@ -17,7 +21,7 @@ const StopCommand: ICommand = {
       return;
     }
 
-    const { textChannel } = guildQueue;
+    const { textChannel, voiceChannel } = guildQueue;
 
     const { dispatcher } = guildQueue.connection;
 
@@ -25,11 +29,11 @@ const StopCommand: ICommand = {
       dispatcher.resume();
     }
 
-    guildQueue.songs = [];
-
-    guildQueue.totalTime = 0;
+    queue.delete(message.guild.id);
 
     dispatcher.end();
+
+    voiceChannel.leave();
 
     textChannel.send('⏹ **Fila interrompida**');
   }
