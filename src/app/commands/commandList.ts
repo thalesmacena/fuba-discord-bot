@@ -3,6 +3,7 @@ export const commandsList = [
   'pause',
   'skip',
   'queue',
+  'remove',
   'volume',
   'stop',
   'pool',

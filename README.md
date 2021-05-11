@@ -22,6 +22,7 @@
     - [⏸ pause](#-pause)
     - [⏭ skip](#-skip)
     - [🧾 queue](#-queue)
+    - [⏏ remove](#-remove)
     - [🎚 volume](#-volume)
     - [⏹ stop](#-stop)
   - [Utility Commands](#utility-commands)
@@ -71,6 +72,9 @@ Advance to the next song in the guild's play queue
 
 #### 🧾 queue
 Shows information about the guild's play queue, such as each video, its channel, its duration and the time until it is played. If the user enters a number in the play queue, he can get details about who ordered the song and when it was added to the queue.
+
+#### ⏏ remove
+Removes a song of the guild's play queue
 
 #### 🎚 volume
 Changes the audio volume of the playlist, if no parameters are passed, it only tells you the current volume of the playlist
