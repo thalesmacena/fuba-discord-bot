@@ -34,10 +34,14 @@ const QueueCommand: ICommand = {
         .setThumbnail(guildQueue.songs[0].thumbnail)
         .setTitle(`Fila de Reprodução de ${message.guild.toString()}`)
         .setDescription(
-          `Tempo total da fila: ${format(
-            addSeconds(new Date(0), guildQueue.totalTime),
-            'HH:mm:ss'
-          )}`
+          `Tempo total da fila: ${
+            guildQueue.totalTime >= 3600
+              ? format(
+                  addSeconds(new Date(0), guildQueue.totalTime),
+                  'HH:mm:ss'
+                )
+              : format(addSeconds(new Date(0), guildQueue.totalTime), 'mm:ss')
+          }`
         );
 
       guildQueue.songs.forEach((song, index) => {
