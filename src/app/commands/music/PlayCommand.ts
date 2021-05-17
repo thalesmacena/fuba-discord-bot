@@ -1,7 +1,6 @@
 import { ICommand, IExecuteProps, IGuildQueue, ISong } from '@/app/interfaces';
 import { musicPlayer } from '@/app/utils/musicPlayer';
 import { Embed } from '@/app/views/embed';
-import { guildsQueuesSongs } from '@/server';
 import { addSeconds, format } from 'date-fns';
 import ytsr from 'ytsr';
 
@@ -14,7 +13,8 @@ const PlayCommand: ICommand = {
   execute: async ({
     message,
     argsProps,
-    guildQueue
+    guildQueue,
+    queue
   }: IExecuteProps): Promise<void> => {
     if (message.channel.type !== 'text') {
       message.reply(
@@ -98,7 +98,7 @@ const PlayCommand: ICommand = {
       };
 
       newQueue.totalTime += song.length;
-      guildsQueuesSongs.set(message.guild.id, newQueue);
+      queue.set(message.guild.id, newQueue);
       newQueue.songs.push(song);
 
       try {
@@ -107,9 +107,9 @@ const PlayCommand: ICommand = {
         message.channel.send(
           `🔊 **Conectada à** ${newQueue.voiceChannel.toString()} e :page_facing_up: **vinculado ao** ${newQueue.textChannel.toString()}`
         );
-        musicPlayer(newQueue.songs[0], message.guild.id, guildsQueuesSongs);
+        musicPlayer(newQueue.songs[0], message.guild.id, queue);
       } catch (err) {
-        guildsQueuesSongs.delete(message.guild.id);
+        queue.delete(message.guild.id);
         message.reply('Ocorreu um erro ao tocar a musica', err);
       }
       return;
