@@ -30,7 +30,8 @@ export const routes = (
   const commandProps = {
     message,
     argsProps,
-    guildQueue
+    guildQueue,
+    queue: guildsQueuesSongs
   };
 
   try {
