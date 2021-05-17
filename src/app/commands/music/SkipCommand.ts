@@ -54,7 +54,7 @@ const SkipCommand: ICommand = {
       );
 
       const newSongList = songList.slice(index);
-      const removedSongList = songList.slice(0, index - 1);
+      const removedSongList = songList.slice(0, index);
 
       let uptime = 0;
 
