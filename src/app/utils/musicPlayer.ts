@@ -8,14 +8,15 @@ export const musicPlayer = async (
   queue: Collection<string, IGuildQueue>
 ): Promise<void> => {
   const guildQueue = queue.get(guildId);
+  const { textChannel } = guildQueue;
 
   if (!song) {
     try {
       guildQueue.voiceChannel.leave();
       queue.delete(guildId);
-      guildQueue.textChannel.send('⏹ **A fila terminou**');
+      textChannel.send('⏹ **A fila terminou**');
     } catch {
-      guildQueue.textChannel.send('⏹ **Houve um erro ao encerrar a fila**');
+      textChannel.send('⏹ **Houve um erro ao encerrar a fila**');
     }
     return;
   }
@@ -38,9 +39,7 @@ export const musicPlayer = async (
       })
       .on('error', () => {
         try {
-          guildQueue.textChannel.send(
-            'Houve um erro ao reproduzir essa música'
-          );
+          textChannel.send('Houve um erro ao reproduzir essa música');
           queue.delete(guildId);
         } catch {
           queue.delete(guildId);
@@ -48,7 +47,7 @@ export const musicPlayer = async (
       });
   } catch {
     try {
-      guildQueue.textChannel.send('Houve um erro ao reproduzir as músicas');
+      textChannel.send('Houve um erro ao reproduzir as músicas');
       guildQueue.voiceChannel.leave();
       queue.delete(guildId);
     } catch {
@@ -61,5 +60,5 @@ export const musicPlayer = async (
 
   // Envia a mensagem da música no servidor
   song.embed.setTitle(`▶️ Tocando: ${song.title}`);
-  guildQueue.textChannel.send(song.embed);
+  textChannel.send(song.embed);
 };
