@@ -31,8 +31,6 @@ const StopCommand: ICommand = {
 
     queue.delete(message.guild.id);
 
-    dispatcher.end();
-
     voiceChannel.leave();
 
     textChannel.send('⏹ **Fila interrompida**');
