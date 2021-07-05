@@ -41,7 +41,7 @@ const PlayCommand: ICommand = {
       return;
     }
 
-    const search = argsProps.commandBody.slice(5);
+    const search = argsProps.commandBody;
 
     message.channel.send(`Buscando :mag_right: \`${search}\` `);
 

@@ -47,7 +47,7 @@ const PoolCommand: ICommand = {
       return;
     }
 
-    const question = bruteFormat.shift().slice(5);
+    const question = bruteFormat.shift();
 
     const pool = bruteFormat.filter((poolOption) => poolOption.length !== 0);
 

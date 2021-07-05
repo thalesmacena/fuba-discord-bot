@@ -11,9 +11,16 @@ export const routes = (
 
   if (message.author.bot || !message.content.startsWith(prefix)) return;
 
-  const commandBody = message.content.slice(prefix.length).trim();
-  const args = commandBody.split(' ');
+  const formmatedInput = message.content.slice(prefix.length).trim();
+  const args = formmatedInput.split(' ');
   const command = args.shift().toLowerCase();
+  const commandBody = formmatedInput
+    .slice(
+      formmatedInput.indexOf(' ') >= 0
+        ? formmatedInput.indexOf(' ')
+        : command.length
+    )
+    .trimStart();
 
   if (!commands.has(command)) {
     message.reply(`Comando não encontrado, tente ${prefix}help`);

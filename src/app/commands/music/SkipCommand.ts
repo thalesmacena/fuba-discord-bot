@@ -4,8 +4,8 @@ import { musicPlayer } from '@/app/utils/musicPlayer';
 const SkipCommand: ICommand = {
   name: 'skip',
   description: 'Pula uma música na lista de reprodução',
-  args: 'Nenhum argumento',
-  example: '`skip`',
+  args: '[posição | nulo] - uma posição na fila de reprodução ou nulo',
+  example: '`skip` ou `skip 3`',
 
   execute: async ({
     message,
